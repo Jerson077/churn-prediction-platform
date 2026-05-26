@@ -65,5 +65,7 @@ cache/
 coverage/
 *.coverage
 
-# Keep .env files (DO NOT IGNORE)
-# .env files are intentionally tracked in this project
+# Secrets and Environment Variables
+.env
+.env.*
+!.env.example
