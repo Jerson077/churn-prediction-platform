@@ -1,18 +1,22 @@
+@echo off
+echo ========================================
+echo Churn Prediction Platform - Backend Start
+echo ========================================
+echo.
+
 cd server
 
-echo Activating conda environment 'churn'...
+if not exist venv\Scripts\activate.bat (
+    echo [ERROR] Virtual environment not found! 
+    echo Please run setup-all.bat first to install dependencies.
+    pause
+    exit /b 1
+)
 
-cd venv\Scripts
-call activate.bat 
-cd ..\..
+echo Activating virtual environment...
+call venv\Scripts\activate.bat
 
-
-echo Loading environment variables from .env file..
-call python app.py
-
-echo.
-echo Starting Flask server on http://localhost:5000
-echo Press Ctrl+C to stop the server
-echo.
-
+echo Starting Flask server...
 python app.py
+
+pause
