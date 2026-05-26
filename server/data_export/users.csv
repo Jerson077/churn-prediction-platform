@@ -1,0 +1,4 @@
+id,name,email,password_hash,created_at,profile_photo
+1,JERSON D M,jersonjerson223@gmail.com,scrypt:32768:8:1$QuZ8tx3qTBzy5FvY$fe1242ab94359a54a5bfc4d8f00e4699a4898291b8cf0a07ee1487822b51f389e6606d0b7bead68f960d8b199718a6a17a2a129752cdce9a8d15bb6c55552504,2026-02-21 12:17:43,
+2,Jerson D M,jerson3@example.com,ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f,2026-02-21 12:35:34,
+3,Test User,test@example.com,ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f,2026-02-21 13:18:22,

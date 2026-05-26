@@ -1,0 +1,46 @@
+﻿{
+    "version": "1.1.408",
+    "time": "1771860707187",
+    "generalDiagnostics": [
+        {
+            "file": "c:\\Users\\jerso\\OneDrive\\Desktop\\churn-main\\server\\routes\\survey_routes_new.py",
+            "severity": "error",
+            "message": "Argument of type \"(current_user_id: Unknown, survey_id: Unknown) -> (tuple[Response, int] | None)\" cannot be assigned to parameter of type \"T_route@route\"\n┬á┬áType \"(current_user_id: Unknown, survey_id: Unknown) -> (tuple[Response, int] | None)\" is not assignable to type \"RouteCallable\"\n┬á┬á┬á┬áType \"(current_user_id: Unknown, survey_id: Unknown) -> (tuple[Response, int] | None)\" is not assignable to type \"RouteCallable\"\n┬á┬á┬á┬á┬á┬áType \"(current_user_id: Unknown, survey_id: Unknown) -> (tuple[Response, int] | None)\" is not assignable to type \"(...) -> ResponseReturnValue\"\n┬á┬á┬á┬á┬á┬á┬á┬áFunction return type \"tuple[Response, int] | None\" is incompatible with type \"ResponseReturnValue\"\n┬á┬á┬á┬á┬á┬á┬á┬á┬á┬áType \"tuple[Response, int] | None\" is not assignable to type \"ResponseReturnValue\"\n┬á┬á┬á┬á┬á┬áType \"(current_user_id: Unknown, survey_id: Unknown) -> (tuple[Response, int] | None)\" is not assignable to type \"(...) -> Awaitable[ResponseReturnValue]\"\n┬á┬á┬á┬á┬á┬á┬á┬áFunction return type \"tuple[Response, int] | None\" is incompatible with type \"Awaitable[ResponseReturnValue]\"\n┬á┬á┬á┬á┬á┬á┬á┬á┬á┬áType \"tuple[Response, int] | None\" is not assignable to type \"Awaitable[ResponseReturnValue]\"",
+            "range": {
+                "start": {
+                    "line": 47,
+                    "character": 1
+                },
+                "end": {
+                    "line": 47,
+                    "character": 63
+                }
+            },
+            "rule": "reportArgumentType"
+        },
+        {
+            "file": "c:\\Users\\jerso\\OneDrive\\Desktop\\churn-main\\server\\services\\recommendation_service.py",
+            "severity": "error",
+            "message": "Argument of type \"float\" cannot be assigned to parameter \"default\" of type \"int\" in function \"_ensure_finite\"\n┬á┬á\"float\" is not assignable to \"int\"",
+            "range": {
+                "start": {
+                    "line": 49,
+                    "character": 81
+                },
+                "end": {
+                    "line": 49,
+                    "character": 85
+                }
+            },
+            "rule": "reportArgumentType"
+        }
+    ],
+    "summary": {
+        "filesAnalyzed": 25,
+        "errorCount": 2,
+        "warningCount": 0,
+        "informationCount": 0,
+        "timeInSec": 3.445
+    }
+}
+

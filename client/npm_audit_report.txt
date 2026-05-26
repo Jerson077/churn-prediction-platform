@@ -1,0 +1,96 @@
+﻿# npm audit report
+
+ajv  <6.14.0
+Severity: moderate
+ajv has ReDoS when using `$data` option - https://github.com/advisories/GHSA-2g4f-4pwh-qvx6
+fix available via `npm audit fix`
+node_modules/ajv
+
+glob  3.0.0 - 10.5.0
+Severity: high
+glob CLI: Command injection via -c/--cmd executes matches with shell:true - https://github.com/advisories/GHSA-5j98-mcp5-4vw2
+Depends on vulnerable versions of minimatch
+fix available via `npm audit fix`
+node_modules/glob
+
+js-yaml  4.0.0 - 4.1.0
+Severity: moderate
+js-yaml has prototype pollution in merge (<<) - https://github.com/advisories/GHSA-mh29-5h37-fv8m
+fix available via `npm audit fix`
+node_modules/js-yaml
+
+jspdf  <=4.1.0
+Severity: critical
+jsPDF has Local File Inclusion/Path Traversal vulnerability - https://github.com/advisories/GHSA-f8cm-6447-x5h2
+jsPDF has PDF Injection in AcroFormChoiceField that allows Arbitrary JavaScript Execution - https://github.com/advisories/GHSA-pqxr-3g65-p328
+jsPDF Vulnerable to Denial of Service (DoS) via Unvalidated BMP Dimensions in BMPDecoder - https://github.com/advisories/GHSA-95fx-jjr5-f39c
+jsPDF Vulnerable to Stored XMP Metadata Injection (Spoofing & Integrity Violation) - https://github.com/advisories/GHSA-vm32-vv63-w422
+jsPDF has Shared State Race Condition in addJS Plugin - https://github.com/advisories/GHSA-cjw8-79x6-5cj4
+jsPDF has a PDF Injection in AcroForm module allows Arbitrary JavaScript Execution (RadioButton.createOption and "AS" property) - https://github.com/advisories/GHSA-p5xg-68wr-hm3m
+jsPDF has a PDF Object Injection via Unsanitized Input in addJS Method - https://github.com/advisories/GHSA-9vjf-qc39-jprp
+jsPDF Affected by Client-Side/Server-Side Denial of Service via Malicious GIF Dimensions - https://github.com/advisories/GHSA-67pg-wm7f-q7fj
+fix available via `npm audit fix --force`
+Will install jspdf@4.2.0, which is a breaking change
+node_modules/jspdf
+  jspdf-autotable  2.0.9 - 2.1.0 || 2.3.3 - 5.0.2
+  Depends on vulnerable versions of jspdf
+  node_modules/jspdf-autotable
+
+minimatch  <10.2.1
+Severity: high
+minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern - https://github.com/advisories/GHSA-3ppc-4f35-3m26
+fix available via `npm audit fix --force`
+Will install eslint@10.0.1, which is a breaking change
+node_modules/@typescript-eslint/typescript-estree/node_modules/minimatch
+node_modules/glob/node_modules/minimatch
+node_modules/minimatch
+  @eslint/config-array  <=0.22.0
+  Depends on vulnerable versions of minimatch
+  node_modules/@eslint/config-array
+    eslint  0.7.1 - 2.0.0-rc.1 || 4.1.0 - 10.0.0-rc.2
+    Depends on vulnerable versions of @eslint/config-array
+    Depends on vulnerable versions of @eslint/eslintrc
+    Depends on vulnerable versions of minimatch
+    node_modules/eslint
+      @typescript-eslint/eslint-plugin  <=8.56.1-alpha.2
+      Depends on vulnerable versions of @typescript-eslint/type-utils
+      Depends on vulnerable versions of @typescript-eslint/utils
+      Depends on vulnerable versions of eslint
+      node_modules/@typescript-eslint/eslint-plugin
+      @typescript-eslint/parser  1.1.1-alpha.0 - 8.56.1-alpha.2
+      Depends on vulnerable versions of @typescript-eslint/typescript-estree
+      Depends on vulnerable versions of eslint
+      node_modules/@typescript-eslint/parser
+        typescript-eslint  <=8.55.1-alpha.3
+        Depends on vulnerable versions of @typescript-eslint/eslint-plugin
+        Depends on vulnerable versions of @typescript-eslint/parser
+        Depends on vulnerable versions of @typescript-eslint/utils
+        node_modules/typescript-eslint
+      @typescript-eslint/utils  <=8.56.1-alpha.2
+      Depends on vulnerable versions of @typescript-eslint/typescript-estree
+      Depends on vulnerable versions of eslint
+      node_modules/@typescript-eslint/utils
+        @typescript-eslint/type-utils  5.9.2-alpha.0 - 8.56.1-alpha.2
+        Depends on vulnerable versions of @typescript-eslint/typescript-estree
+        Depends on vulnerable versions of @typescript-eslint/utils
+        node_modules/@typescript-eslint/type-utils
+  @eslint/eslintrc  0.0.1 || >=0.1.1
+  Depends on vulnerable versions of minimatch
+  node_modules/@eslint/eslintrc
+  @typescript-eslint/typescript-estree  6.16.0 - 8.56.1-alpha.2
+  Depends on vulnerable versions of minimatch
+  node_modules/@typescript-eslint/typescript-estree
+
+vite  7.1.0 - 7.1.10
+Severity: moderate
+vite allows server.fs.deny bypass via backslash on Windows - https://github.com/advisories/GHSA-93m4-6634-74q7
+fix available via `npm audit fix`
+node_modules/vite
+
+16 vulnerabilities (3 moderate, 11 high, 2 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force

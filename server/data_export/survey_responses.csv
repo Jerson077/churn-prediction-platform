@@ -1,0 +1,9 @@
+id,survey_id,customer_email,responses,submitted_at
+9,8,anonymous,"{""How satisfied are you with our service?"": ""5"", ""Tell us what to improve"": ""add new  movies"", ""Is the app run smoothly"": ""Yes""}",2026-02-22 08:39:49
+10,8,anonymous,"{""How satisfied are you with our service?"": ""5"", ""Tell us what to improve"": """", ""Is the app run smoothly"": ""Yes""}",2026-02-22 08:39:59
+11,8,anonymous,"{""How satisfied are you with our service?"": ""5"", ""Tell us what to improve"": """", ""Is the app run smoothly"": ""Yes""}",2026-02-22 08:40:21
+12,8,anonymous,"{""How satisfied are you with our service?"": ""5"", ""Tell us what to improve"": """", ""Is the app run smoothly"": """"}",2026-02-22 08:40:28
+13,8,anonymous,"{""How satisfied are you with our service?"": ""5"", ""Tell us what to improve"": """", ""Is the app run smoothly"": ""Yes""}",2026-02-22 08:40:35
+14,8,anonymous,"{""How satisfied are you with our service?"": ""1"", ""Tell us what to improve"": ""Do whatever you want"", ""Is the app run smoothly"": ""No""}",2026-02-22 08:41:56
+15,10,anonymous,"{""How satisfied are you with our service?"": ""5""}",2026-02-22 09:41:17
+16,11,anonymous,"{""How satisfied are you with our service?"": ""5""}",2026-02-23 09:06:23

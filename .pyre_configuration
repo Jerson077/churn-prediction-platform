@@ -1,0 +1,13 @@
+{
+  "source_directories": [
+    "server"
+  ],
+  "search_path": [
+    "server/venv/Lib/site-packages",
+    "server"
+  ],
+  "exclude": [
+    ".*/__pycache__/.*",
+    ".*/client/.*"
+  ]
+}
