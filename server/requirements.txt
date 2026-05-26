@@ -7,6 +7,6 @@ xgboost>=1.7.0
 openpyxl==3.1.2
 python-dotenv==1.0.0
 werkzeug==3.0.1
-google-generativeai
+google-genai
 pyjwt==2.8.0
 gunicorn>=21.2.0

@@ -1,6 +1,6 @@
 import os
 import json
-import google.generativeai as genai
+from google import genai
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -11,7 +11,7 @@ class GeminiService:
         api_key = os.getenv('GEMINI_API_KEY', '')
         if api_key:
             try:
-                genai.configure(api_key=api_key) # type: ignore
+                self.client = genai.Client(api_key=api_key)
                 # Use current available models (as of October 2025)
                 model_names = [
                     'gemini-2.5-flash',           # Stable Gemini 2.5 Flash
@@ -21,18 +21,18 @@ class GeminiService:
                     'gemini-2.5-pro',             # Stable Gemini 2.5 Pro
                 ]
                 
-                self.model = None
+                self.model_name = None
                 for model_name in model_names:
                     try:
-                        self.model = genai.GenerativeModel(model_name) # type: ignore
-                        print(f"✓ Successfully initialized Gemini model: {model_name}")
+                        self.model_name = model_name
+                        print(f"✓ Successfully configured Gemini model: {model_name}")
                         self.enabled = True
                         break
                     except Exception as e:
                         print(f"Model {model_name} not available: {e}")
                         continue
                 
-                if not self.model:
+                if not self.model_name:
                     print("❌ No Gemini models available")
                     self.enabled = False
                     
@@ -131,8 +131,11 @@ STRICT RULES:
 
         response = None
         try:
-            assert self.model is not None
-            response = self.model.generate_content(prompt) # type: ignore
+            assert hasattr(self, 'client') and self.model_name is not None
+            response = self.client.models.generate_content(
+                model=self.model_name,
+                contents=prompt
+            )
             
             if not response or not response.text:
                 return None
